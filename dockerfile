@@ -16,5 +16,3 @@ EXPOSE 80
 
 COPY ./entrypoint.sh /Storm-Breaker/
 ENTRYPOINT ["./entrypoint.sh"]
-
-
