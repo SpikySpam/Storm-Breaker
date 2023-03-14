@@ -17,7 +17,7 @@ Files to Dockerize [Storm-Breaker](https://github.com/ultrasecurity/Storm-Breake
    - **TF_VAR_DOCKER_STORMBREAKER_USER**=**```<YOUR_USERNAME>```**
    - **TF_VAR_DOCKER_STORMBREAKER_PASSWORD**=**```<YOUR_PASSWORD>```**
 
-- On Windows (*some errors on entrypoint.sh not found, still no sure why*)
+- On Windows (*some errors on entrypoint.sh not found, not sure why*)
 
   - Open **```entrypoint.sh```** in **notepad++**
      - Edit -> EOL Conversion -> Unix (LF)
