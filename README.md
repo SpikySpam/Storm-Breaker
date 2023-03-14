@@ -18,7 +18,7 @@ Files to Dockerize [Storm-Breaker](https://github.com/ultrasecurity/Storm-Breake
    - **TF_VAR_DOCKER_STORMBREAKER_PASSWORD**=**```<YOUR_PASSWORD>```**
 
 - Run the following commands:
-   ```
+   ```bash
    # docker builder prune -fa
    # docker image prune -fa
    
