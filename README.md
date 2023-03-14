@@ -40,3 +40,4 @@ Files to Dockerize [Storm-Breaker](https://github.com/ultrasecurity/Storm-Breake
       ```
       chmod +x entrypoint.sh
       ```
+- Context menu **Compose Up** in **VSCode** (*with the docker extension*) seems to work just fine
