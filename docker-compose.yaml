@@ -1,0 +1,20 @@
+﻿version: '3.8'
+
+services:
+  storm-breaker:
+    image: storm-breaker:${TF_VAR_VERSION_DOCKER_STORMBREAKER}
+    container_name: storm-breaker
+    restart: unless-stopped
+    volumes:
+      - $HOME/docker/storm-breaker/images/:/var/www/html/images
+      - $HOME/docker/storm-breaker/sounds/:/var/www/html/sounds
+      - $HOME/docker/storm-breaker/log/:/var/www/html/log
+    ports:
+      - ${TF_VAR_DOCKER_STORMBREAKER_PORT}:2525
+    build:
+      context: .
+      dockerfile: ./dockerfile
+    environment:
+      - NGROK_API_KEY=${TF_VAR_NGROK_API_KEY}
+      - USERNAME=${TF_VAR_DOCKER_STORMBREAKER_USER}
+      - PASSWORD=${TF_VAR_DOCKER_STORMBREAKER_PASSWORD}
