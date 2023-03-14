@@ -17,10 +17,22 @@ Files to Dockerize [Storm-Breaker](https://github.com/ultrasecurity/Storm-Breake
    - **TF_VAR_DOCKER_STORMBREAKER_USER**=**```<YOUR_USERNAME>```**
    - **TF_VAR_DOCKER_STORMBREAKER_PASSWORD**=**```<YOUR_PASSWORD>```**
 
-- Run the following command:
+- On Windows
+
+  - Open **```entrypoint.sh```** in **notepad++**
+     - Edit -> EOL Conversion -> Unix (LF)
+  - Run the following command:
+      ```
+      chmod +x entrypoint.sh
+      ```
+  
+- Run the following commands:
    ```
+   # docker builder prune -fa
+   # docker image prune -fa
+   
    docker compose build --no-cache
-   docker compose up -d --force-recreatee
+   docker compose up -d --force-recreate
    ```
 
 - Navigate to you **NGROK Tunnel Agents**: https://dashboard.ngrok.com/tunnels/agents
