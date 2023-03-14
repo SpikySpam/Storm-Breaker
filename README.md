@@ -15,7 +15,8 @@
 
 - Run the following command:
    ```
-   docker compose up -d --force-recreate
+   docker compose build --no-cache
+   docker compose up -d --force-recreatee
    ```
 
 - Navigate to you **NGROK Tunnel Agents**: https://dashboard.ngrok.com/tunnels/agents
